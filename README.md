@@ -22,7 +22,7 @@ pod 'KYUtil'
 
 ## Author
 
-kyleboy, iyinghui@163.com
+kyleboy, kyleboy@126.com
 
 ## License
 

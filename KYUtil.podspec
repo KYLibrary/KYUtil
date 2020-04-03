@@ -21,20 +21,30 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/kyleboy/KYUtil'
+  s.homepage         = 'https://github.com/KYLibrary/KYUtil'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'kyleboy' => 'iyinghui@163.com' }
-  s.source           = { :git => 'https://github.com/kyleboy/KYUtil.git', :tag => s.version.to_s }
+  s.author           = { 'kyleboy' => 'kyleboy@126.com' }
+  s.source           = { :git => 'https://github.com/KYLibrary/KYUtil.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.default_subspec         = "KYPathUtil"
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
-  s.source_files = 'KYUtil/Classes/**/*'
+  # s.source_files = 'KYUtil/*.{h,m}'
   
   # s.resource_bundles = {
   #   'KYUtil' => ['KYUtil/Assets/*.png']
   # }
+  
+  s.subspec "KYPathUtil" do |ss|
+    ss.source_files         = "KYUtil/KYPathUtil/**/*.{h,m}"
+  end
+  
+  s.subspec "KYCategories" do |ss|
+    ss.dependency 'KYUtil/KYPathUtil'
+    ss.source_files         = "KYUtil/KYCategories/**/*.{h,m}"
+  end
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

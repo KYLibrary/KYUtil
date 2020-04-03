@@ -7,6 +7,8 @@
 //
 
 #import "KYViewController.h"
+#import "UIImage+KYAdd.h"
+#import "KYTest.h"
 
 @interface KYViewController ()
 
@@ -18,12 +20,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [UIImage imageNamed:@"sdjfkds" inBundleForClass:[KYTest class]];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    // Dispose of any resources that can be recreated.    
 }
 
 @end
